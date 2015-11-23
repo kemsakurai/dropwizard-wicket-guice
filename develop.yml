@@ -1,0 +1,24 @@
+# use the simple server factory if you only want to run on a single port
+server:
+  applicationConnectors:
+    - type: http
+      port: 8080
+  adminConnectors:
+    - type: http
+      port: 8081
+
+logging:
+
+  # The default level of all loggers. Can be OFF, ERROR, WARN, INFO, DEBUG, TRACE, or ALL.
+  level: INFO
+
+  # Logger-specific levels.
+  loggers:
+
+    # Sets the level for 'com.github.ko2ic' to DEBUG.
+    com.github.ko2ic: DEBUG
+
+  appenders:
+    - type: console
+      timeZone: JST
+

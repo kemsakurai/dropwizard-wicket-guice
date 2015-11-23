@@ -1,0 +1,40 @@
+plugins {
+  id 'java' // or 'groovy' Must be explicitly applied
+  id 'com.github.johnrengelman.shadow' version '1.2.2'
+}
+
+apply plugin: 'java'
+apply plugin: 'maven'
+apply plugin: 'com.github.johnrengelman.shadow'
+
+group = 'xyz.monotalk.dropwizard'
+version = '0.1.0'
+description = """Dropwizard Wicket Module"""
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'io.dropwizard', name: 'dropwizard-core', version:'0.8.4'
+    compile group: 'org.apache.wicket', name: 'wicket-core', version:'7.1.0'
+    compile group: 'com.google.inject', name: 'guice', version:'4.0'
+    compile group: 'com.google.inject.extensions', name: 'guice-servlet', version:'4.0'
+    compile group: 'org.apache.wicket', name: 'wicket-guice', version:'7.1.0'
+    compile group: 'org.apache.logging.log4j', name: 'log4j-api', version:'2.3'
+    compile group: 'org.apache.logging.log4j', name: 'log4j-core', version:'2.3'
+}
+
+shadowJar {
+  tasks.clean.execute()
+  mergeServiceFiles() 
+  exclude 'META-INF/*.DSA'
+  exclude 'META-INF/*.RSA'
+}
+jar {
+    manifest {
+        attributes 'Main-Class': 'xyz.monotalk.dropwizard.wicket.SampleApplication' 
+    }
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="OFF">
+  <appenders>
+    <Console name="Console" target="SYSTEM_OUT">
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+    </Console>
+  </appenders>
+  <loggers>
+    <root level="info">
+      <appender-ref ref="Console"/>
+    </root>
+    
+    <logger name="org.apache.wicket" level="info"/> 
+    <logger name="org.apache.wicket.protocol.http.HttpSessionStore" level="info"/> 
+    <logger name="org.apache.wicket.version" level="info"/> 
+    <logger name="org.apache.wicket.RequestCycle" level="info"/> 
+    <logger name="xyz.monotalk" level="info"/>
+    
+  </loggers>
+</configuration>
