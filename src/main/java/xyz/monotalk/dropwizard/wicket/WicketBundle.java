@@ -29,6 +29,10 @@ import org.eclipse.jetty.server.session.SessionHandler;
 import org.eclipse.jetty.servlet.DefaultServlet;
 import org.eclipse.jetty.servlet.FilterHolder;
 
+/**
+ * WicketBundle
+ * @author Kem
+**/
 public class WicketBundle implements ConfiguredBundle<WicketConfiguration> {
 
     @Override
@@ -46,7 +50,7 @@ public class WicketBundle implements ConfiguredBundle<WicketConfiguration> {
         environment.servlets().setSessionHandler(new SessionHandler());
         environment.jersey().disable();
     }
-
+    
     private FilterHolder getFilterHolder(boolean isDeployment) {
         FilterHolder filterHolder = new FilterHolder(new GuiceFilter());
         filterHolder.setName("Guice Filter");

@@ -20,7 +20,7 @@ import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 
 /**
- *
+ * SampleApplication
  * @author Kem
  */
 public class SampleApplication extends Application<WicketConfiguration> {
