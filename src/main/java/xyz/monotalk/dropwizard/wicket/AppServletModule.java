@@ -25,7 +25,7 @@ import org.apache.wicket.protocol.http.WebApplication;
 import org.apache.wicket.protocol.http.WicketFilter;
 
 /**
- *
+ * AppServletModule
  * @author kensakurai
  */
 public class AppServletModule extends ServletModule {

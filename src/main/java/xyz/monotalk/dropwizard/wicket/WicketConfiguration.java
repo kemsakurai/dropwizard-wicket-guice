@@ -18,7 +18,10 @@ package xyz.monotalk.dropwizard.wicket;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import io.dropwizard.Configuration;
-
+/**
+ * WicketConfiguration
+ * @author Kem
+**/
 public class WicketConfiguration extends Configuration {
 
     private boolean isDeployment = false;

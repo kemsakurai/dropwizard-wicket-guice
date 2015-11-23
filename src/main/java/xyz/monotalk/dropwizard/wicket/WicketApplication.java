@@ -25,7 +25,8 @@ import xyz.monotalk.dropwizard.wicket.pages.SamplePage;
  * Application object for your web application. If you want to run this
  * application without deploying, run the Start class.
  *
- * @see xyz.monotalk.Start#main(String[])
+ * @see xyz.monotalk.dropwizard.wicket.SampleApplication#main(String[])
+ * @author Kem
  */
 public class WicketApplication extends WebApplication {
 

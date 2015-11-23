@@ -18,6 +18,10 @@ package xyz.monotalk.dropwizard.wicket.pages;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.basic.Label;
 
+/**
+ * SamplePage
+ * @author kensakurai
+ */
 public class SamplePage extends WebPage {
 
     private static final long serialVersionUID = 8605508706668725437L;
