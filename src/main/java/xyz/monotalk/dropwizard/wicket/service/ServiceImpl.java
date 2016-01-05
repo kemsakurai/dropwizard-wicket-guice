@@ -13,27 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package xyz.monotalk.dropwizard.wicket.pages;
-
-import javax.inject.Inject;
-import org.apache.wicket.markup.html.WebPage;
-import org.apache.wicket.markup.html.basic.Label;
-import xyz.monotalk.dropwizard.wicket.service.IService;
+package xyz.monotalk.dropwizard.wicket.service;
 
 /**
- * SamplePage
- * @author kensakurai
+ * ServiceImpl
+ *
+ * @author Kem
  */
-public class SamplePage extends WebPage {
+public class ServiceImpl implements IService {
 
-    private static final long serialVersionUID = 8605508706668725437L;
-    
-    @Inject
-    IService service;
-    
     @Override
-    public void onInitialize() {
-    	super.onInitialize();
-        add(new Label("message", service.execute()));
+    public String execute() {
+        return "Hello world!!!";
     }
 }
